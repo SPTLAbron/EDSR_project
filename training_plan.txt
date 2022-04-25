@@ -1,0 +1,7 @@
+trianing plan:
+  * run standard train.py and get model results (kernel = 3, n_feat (number of layers)=256)
+  * increase the number of layers in the model and re-run training (n_feat=300?)
+  * if result improves increase the number of layers further and re-train (n_feat=320?)
+  * also record how long each trianing run takes
+  ** CHANGE TENSORBOARD OUTPUT FOLDER FOR EACH RUN OR THE PREVIOUS WILL OVERWRITE **
+  * push to github

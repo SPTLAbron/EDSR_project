@@ -2,7 +2,8 @@ import torch
 from torch import nn
 from torchsummary import summary
 
-n_feat = 256
+# n_feat -> number of layers in the model
+n_feat = 256 
 kernel_size = 3
 
 
