@@ -8,7 +8,7 @@ import imshow
 import pdb
 import torchvision
 from torch.utils.tensorboard import SummaryWriter
-tensorboard_name = 'first_test'
+tensorboard_name = 'second_test'
 writer = SummaryWriter('run/'+tensorboard_name)
 
 def is_picklable(obj):
