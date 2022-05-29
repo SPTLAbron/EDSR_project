@@ -8,7 +8,7 @@ import imshow
 import pdb
 import torchvision
 from torch.utils.tensorboard import SummaryWriter
-tensorboard_name = 'second_test'
+tensorboard_name = 'third_test'
 writer = SummaryWriter('run/'+tensorboard_name)
 
 def is_picklable(obj):
@@ -33,8 +33,8 @@ valid_transforms = Compose([RandomHorizontalFlip(p=0.5),
                             #Normalize([0.440, 0.435, 0.403],
                                       #[1.0, 1.0, 1.0])])
 
-trainset = DIV2K_x2(root_dir=train_dir, im_size=300, scale=4, transform=train_transforms)
-validset = DIV2K_x2(root_dir=val_dir, im_size=300, scale=4, transform=valid_transforms)
+trainset = DIV2K_x2(root_dir=train_dir, im_size=600, scale=2, transform=train_transforms)
+validset = DIV2K_x2(root_dir=val_dir, im_size=600, scale=2, transform=valid_transforms)
 
 trainloader = DataLoader(trainset, batch_size=4, shuffle=True)
 validloader = DataLoader(validset, batch_size=4, shuffle=True)

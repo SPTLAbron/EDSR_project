@@ -72,7 +72,7 @@ def to_tensor(pic):
     img = img.view(pic.size[1], pic.size[0], nchannel)
     # put it from HWC to CHW format
     # yikes, this transpose takes 80% of the loading time/CPU
-    img = img.transpose(0, 1).transpose(0, 2).contiguous()
+    img = img.transpose(0, 1).transpose(0, 2).  contiguous()
     if isinstance(img, torch.ByteTensor):
         return img.float().div(255)
     else:
