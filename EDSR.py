@@ -31,12 +31,12 @@ class edsr(nn.Module):
         num_blocks = 32
 
         self.conv1 = nn.Conv2d(in_ch, n_feat, kernel_size, padding=1)
-        self.conv_up = nn.Conv2d(n_feat, n_feat * 16, kernel_size, padding=1)
+        self.conv_up = nn.Conv2d(n_feat, n_feat * 4, kernel_size, padding=1)
         self.conv_out = nn.Conv2d(n_feat, in_ch, kernel_size, padding=1)
 
         self.body = self.make_layer(_Res_Block, num_blocks)
 
-        self.upsample = nn.Sequential(self.conv_up, nn.PixelShuffle(4))
+        self.upsample = nn.Sequential(self.conv_up, nn.PixelShuffle(2))
 
     def make_layer(self, block, layers):
         res_block = []

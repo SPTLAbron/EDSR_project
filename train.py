@@ -18,8 +18,8 @@ def is_picklable(obj):
         return False
     return True
 
-train_dir = '../data/images'
-val_dir = '../data/images'
+train_dir = 'data/train'
+val_dir = 'data/valid'
 
 train_transforms = Compose([RandomHorizontalFlip(p=0.5),
                             RandomVerticalFlip(p=0.5),
