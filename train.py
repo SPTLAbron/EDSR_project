@@ -8,7 +8,7 @@ import imshow
 import pdb
 import torchvision
 from torch.utils.tensorboard import SummaryWriter
-tensorboard_name = 'third_test'
+tensorboard_name = 'seventh_test_layers_300'
 writer = SummaryWriter('run/'+tensorboard_name)
 
 def is_picklable(obj):
